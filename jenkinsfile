@@ -19,7 +19,7 @@ pipeline {
                 sh "docker image build -t flask_docker:$BUILD_NUMBER ."
             }
         }
-         stage('Login to dockerhub') {
+         stage('Login to the dockerhub') {
             steps {
                 sh "echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_SUR --password-stdin"
 
