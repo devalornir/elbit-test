@@ -1,6 +1,6 @@
 
 
-node {
+pipeline {
 
     agent {
         label 'any'
