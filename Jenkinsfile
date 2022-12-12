@@ -1,9 +1,9 @@
 
 
-pipeline {
+node {
 
     agent {
-        label 'docker_node'
+        label 'any'
     }
     
     environment {
