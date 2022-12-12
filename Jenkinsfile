@@ -46,6 +46,7 @@ pipeline {
                 if (getContext(hudson.FilePath)) {
                     deleteDir()
                 }
+            }
         }
     }
 
