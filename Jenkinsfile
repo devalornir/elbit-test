@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('SCM Checkout') {
             steps {
-                git 'https://github.com/devalornir/elbit-test.git'
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-devalore', url: 'https://github.com/devalornir/elbit-test']]])
             }
         }
         
