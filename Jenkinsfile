@@ -9,10 +9,7 @@ pipeline {
     }
 
     stages {
-        stage('Initialize'){
-        def dockerHome = tool 'myDocker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-    }
+
         stage('SCM Checkout') {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-devalore', url: 'https://github.com/devalornir/elbit-test']]])
